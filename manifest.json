@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Missed Gender",
+  "description": "Missed Gender is an extension that allows users to replace their “deadname” with the name they identify as. By using simple word replacement, the extension is able to identify and replace names, helping to create a more comfortable online experience for those in the trans community.",
+  "version": "1.0",
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
