@@ -36,8 +36,14 @@ function saveOptions() {
 	}, setConfirmation);
 }
 
+// function clearOptions() {
+// 	chrome.storage.sync.clear();
+// 	setConfirmation();
+// }
+
 // set it up and add listeners
 setup();
 document.getElementById('save').addEventListener('click', saveOptions);
+// document.getElementById('clear').addEventListener('click', clearOptions);
 document.getElementById('dead-name').addEventListener('input', removeConfirmation);
 document.getElementById('chosen-name').addEventListener('input', removeConfirmation);

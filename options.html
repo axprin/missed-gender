@@ -1,21 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Test Extension Options</title>
+	<title>Hidden Gender</title>
 	<style>
+		body {
+			margin-top: -15px;
+		}
+		.wrapper {
+			width: 220px;
+			height: 273px;
+		}
+		.border {
+			border: 1px solid black;
+			position: absolute;
+			width: 225px;
+			top: 50px;
+			z-index: -2;
+			left: 5px;
+			height: 234px;
+		}
+		.img-container {
+			/*width: 100%;*/
+			/*margin: 20px auto;*/
+		}
+		img {
+			max-width: 150px;
+			display: block;
+			margin: 25px auto 15px;
+		}
 		#confirmation {
 			color: red;
+			font-size: 16px;
+			text-align: center;
+			margin-top: 15px;
+		}
+		.name-label {
+			text-align: center;
+		}
+		input {
+			width: 92.5%;
+			padding: 8px 16px;
+			margin: 2px 8px 8px;
+			box-sizing: border-box;
+			font-size: 14px;
+			text-align: center;
+		}
+		#save, #clear {
+			background-color: #000;
+			border: none;
+			color: white;
+			padding: 13px 25px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			width: 92.5%;
+			margin: 8px;
 		}
 	</style>
 </head>
 <body>
-	<div>
-	  	<span class="name-label">Dead Name: </span><input type="text" id="dead-name"><br>
-		<span class="name-label">Chosen Name: </span><input type="text" id="chosen-name"><br>
-	</div>
-	<button id="save">Save</button>
-	<div id="confirmation" style="display: none">
-		Your data has been saved.
+	<div class="wrapper">
+		<div class="border"></div>
+		<div class="img-container">
+			<img src="/missed_gender_logo.png" />
+		</div>
+		<div>
+			<div class="name-label">Dead Name</div><input type="text" id="dead-name"><br>
+			<div class="name-label">Chosen Name</div><input type="text" id="chosen-name"><br>
+		</div>
+		<button id="save">Save</button>
+		<!--<button id="clear">Clear</button>-->
+		<div id="confirmation" style="display: none">
+			Your data has been saved.
+		</div>
 	</div>
 	<script src="options.js"></script>
 </body>
